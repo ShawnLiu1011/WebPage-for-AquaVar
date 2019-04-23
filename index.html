@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="utf-8">
+	<title>Beta 1.0</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/demo.css" type="text/css" rel="stylesheet">
+	<link href="css/jquery.gridster.css" type="text/css" rel="stylesheet">
+	<link href="css/aquavar.css" type="text/css" rel="stylesheet">
+	<link href="css/leaflet.css" type="text/css" rel="stylesheet">
+	<link href="css/sidebar-menu.css" type="text/css" rel="stylesheet">
+	<link href="css/pointMenu.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<!--<script src="js/fr.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/fr.js"></script>-->	
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/ncaFonctions.js"></script>
+	<script src="js/leaflet.js"></script>
+	<script src="js/sidebar-menu.js"></script>
+	<script src="js/jquery.gridster.min.js"></script>
+	<script src="js/plotly-latest.min.js"></script>
+	<script src="js/pointMenu.js"></script>	
+	<script src="js/point-sidebar-menu.js"></script>
+	<script src="js/aquavar.js"></script>
+	<script src="js/require.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div class="floatleft">
+			<p>AquaVar (version beta 1.0)</p>
+			<img src="images/logos.jpg" class="logo">
+			<!-- <img src="images/meteo_france_logo.jpeg" class="logo1">
+			<img src="images/dept_alpes_maritimes_logo.png" class="logo1">
+			<img src="images/metropole_nca.jpg" class="logo1">
+			<img src="images/polytech_nice_sophia_logo.png" class="logo">
+			<img src="images/uns_logo.png" class="logo">
+			<img src="images/agence_de_l'eau_logo.jpg" class="logo"> -->
+		</div>			
+		<div class="alignright">
+			<span>
+				<span class="aqv-date" id="dateGMT">
+					<img src="images/spinner.gif">
+				</span>
+				<span class="aqv-date" id="dateUTC">
+					<img src="images/spinner.gif">
+				</span>
+				Marc Gaetano
+				<img src="images/user-24.png">
+			</span>
+			<img id="menu-button" src="images/list-view-24.png">
+		</div>
+	</div>
+
+	<div class="gridster">
+		<ul>
+			<li class="aqv-widget" data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+				<div id="aqv-id-0" class="aqv-item aqv-iframe">
+					<iframe id="ncamap_js" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://sig.nicecotedazur.org/appli/?site=signcajs_aquavar"
+					 onload="trigger();">
+					</iframe>
+				</div>
+				<img class="aqv-remove" src="images/remove.png">
+			</li>
+		</ul>
+	</div>
+
+	<section class="animate-menu animate-menu-right">
+		<ul class="sidebar-menu">
+			<li>
+				<a href="#">
+					<span>Maps</span>
+				</a>
+				<ul class="sidebar-submenu">
+					<li>
+						<a id="aqv-newSIGMap" href="#">SIGMap</a>
+					</li>
+					<li>
+						<a id="aqv-newRadar" href="#">Radareu</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<span>Plots</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="sidebar-submenu" style="display: none;">
+					<li>
+						<a id="aqv-timeSeriesPlot" href="#">Time series</a>
+					</li>
+					<li>
+						<a id="aqv-liveDataPlot" href="#">Live plot</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<span>Grilles</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="sidebar-submenu">
+					<li>
+						<a id="aqv-resize2x3" href="#">2x3</a>
+					</li>
+					<li>
+						<a id="aqv-resize3x3" href="#">3x3</a>
+					</li>
+					<li>
+						<a id="aqv-resize3x4" href="#">3x4</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">
+					<span>Logout</span>
+				</a>
+				<ul class="sidebar-submenu">
+					<li>
+						<a href="#">Confirmer ?</a>
+					</li>
+					<li>
+						<a href="#">Annuler</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+</body>
+
+</html>

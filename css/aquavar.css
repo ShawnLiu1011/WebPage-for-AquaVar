@@ -1,0 +1,109 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #eeeeee;
+}
+
+html {
+	overflow: scroll;
+}
+
+section {
+	margin-top:60px;
+	z-index:1000;
+	height:100%;
+}
+
+.aqv-date {
+	font-size: smaller;
+	padding-right: 10px;
+	margin-right: 5px;
+	border-right: 1px solid white;
+}
+
+.aqv-date img {
+	vertical-align: middle;
+	height: 25px;
+}
+
+div#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 60px;
+	background-color: black;
+	color: white;
+	z-index:3;
+}
+
+div#header div.alignright{
+	padding:20px;
+}
+
+.floatleft {
+	font-size: larger;
+	font-weight: bolder;
+	float: left;
+	padding:7px;
+}
+
+.floatleft p{ 
+	line-height:46px;
+	vertical-align: middle;
+	display:inline-block;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.alignright span img {
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.alignright > img {
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+div.gridster {
+	margin-top: 60px;/* sortable_margin_top */
+	width:100%;
+	padding: 0;
+}
+
+div.gridster ul {
+	list-style-type: none;
+}
+
+img.aqv-remove {
+	height: 10px;
+	float: left;
+	margin: 0 0 5px 5px;
+}
+
+div.aqv-item {
+	margin: 5px 5px 0 5px;
+}
+
+img.aqv-remove:hover {
+	visibility: visible;
+}
+
+li.aqv-widget {
+	padding: 0;
+}
+.logo{
+	height:auto;
+	width:auto;
+	max-width:600px;
+	max-height:46px;
+	vertical-align: middle;
+}
+
